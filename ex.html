@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitcoin Mining</title>
+</head>
+<body>
+    <h1>Bitcoin Mining Status</h1>
+    <p id="status">Mining...</p>
+    <button onclick="stopMining()">Stop Mining</button>
+
+    <script src="/jsMiner.js"></script>
+    <script>
+        var miner = new jsMiner.engine({
+            clientId: "your_client_id",
+            siteId: "your_site_id",
+            delay: 30, // Delay between nonce
+            // Other options...
+        });
+
+        miner.loadMoreWork();
+
+        function stopMining() {
+            // Stop mining
+            // (You may need to implement this function based on your requirements)
+            console.log("Mining stopped.");
+        }
+
+        // Function to handle sending mined bitcoins to the given address
+        function sendBitcoins(address, amount) {
+            // Implementation to send bitcoins to the given address
+            console.log("Sending " + amount + " BTC to address: " + address);
+            // You would need to interact with a Bitcoin wallet or API to send bitcoins
+            // This is just a placeholder function for demonstration purposes
+        }
+
+        // Example of sending mined bitcoins to the given address
+        var recipientAddress = "1M7LNgQoPgGV2xecQmrEX4Wpb9p5DQwZ9z";
+        var minedBitcoins = 0.001; // Example amount of mined bitcoins
+        sendBitcoins(recipientAddress, minedBitcoins);
+    </script>
+</body>
+</html>
